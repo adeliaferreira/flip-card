@@ -49,13 +49,12 @@ img {
     flex-direction: row;
     z-index: 2;
     transform: rotateY(0deg);
-
 }
 
 .card-back {
     flex-direction: column;
-    justify-content: space-between;
-    transform: rotateY(180deg);
+    justify-content: space-between; 
+    transform: rotateY(180deg); 
 }
 
 .front-image-container {
@@ -108,7 +107,7 @@ img {
     font-size: 0.80rem;
 }
 
-.button-container {
+.front-button-container {
     display: flex;
     justify-content: space-between;
     width: 97%;
@@ -162,4 +161,113 @@ img {
     transition: 1s;
     transform: rotateY(0deg);
     visibility: visible;
+}
+
+
+@media screen and (max-width: 600px) {
+    img {
+        height: inherit;
+    }
+    
+    button {
+        margin-bottom: 2%;
+    }
+    
+    .card-front, .card-back {
+        backface-visibility: hidden;
+        width: 13rem;  
+        height: auto; 
+        background-color: #262726;
+        display: flex;
+        margin-top: 1rem;
+        transition: 1000s;
+        transform-style: preserve-3d;
+    }
+
+    .card-front {
+        flex-direction: column;
+        transform: rotateY(0deg);
+        z-index: 2;
+    }
+
+    .card-back {
+        flex-direction: column;
+        justify-content: space-between;
+        transform: rotateY(180deg);
+    }
+    .front-image-container {
+        height: 10.7rem;
+    }
+
+    .front-info-container{
+        width: 100%;
+        height: 45%;
+    }
+
+    .front-button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 18%;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 4%;
+        margin-top: 5%;
+    }
+
+    .font-color-green {
+        font-size: 1rem;
+    }
+
+    .front-text-value {
+        font-size: 1.2rem;
+    }
+
+    .front-title-item {
+        font-size: 0.75rem;
+    }
+
+    .front-subtitle-item {
+        font-size: 0.7rem;
+        width: 95%;
+    }
+
+    .back-content-container {
+        height: 20rem;
+    }
+
+    .back-buttons-container {
+        height: 32%;
+        margin: 3% 3% 2% 4%;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .back-title-text {
+        margin-left: 2%;
+        font-size: 1rem;
+    }
+
+    .card-rotate-hidden {
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        transform: rotateY(180deg);
+        visibility: hidden;
+    }
+    
+    .card-rotate-show {
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        transform: rotateY(0deg);
+        visibility: visible;
+    }
 }
