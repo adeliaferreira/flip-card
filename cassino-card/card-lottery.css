@@ -164,7 +164,7 @@ img {
 }
 
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px),screen and (orientation: portrait) {
     img {
         height: inherit;
     }
