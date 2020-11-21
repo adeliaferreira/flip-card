@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="next-lottery-draw.js"></script>
+
+</head>
+<body>
+
+Date to check: <input type="date" id="myDate">
+
+<p>Click in the button to see next Irish Lottery draw from Date above</p>
+
+<button onclick="selectedDate()">Check</button>
+
+<p> Or use button below to use current date </p>
+
+<button onclick="currentDate()">Use Current Date</button>
+
+
+<p><strong>Note:</strong> Check source code <a href="https://github.com/adeliaferreira/flip-card/tree/master/next-irish-lottery-draw" target="_blank">here</a></p>
+
+<script>
+function selectedDate() {
+  const newDate = new Date(document.getElementById("myDate").value)
+  alert(getNextIrishLotteryDraw(newDate));
+}
+
+function currentDate() {
+  alert(getNextIrishLotteryDraw());
+}
+
+</script>
+
+</body>
+</html>
