@@ -29,5 +29,3 @@ function getNextIrishLotteryDraw(currentDate = new Date()) {
   }
   return nextDraw;
 }
-//   const today = new Date();
-//   console.log(getNextIrishLotteryDraw(today));
